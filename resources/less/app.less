@@ -1,26 +1,44 @@
 @import "../../bower_components/bootstrap/less/bootstrap";
 @import "../../bower_components/bootstrap/less/theme";
+@import "../../bower_components/less-elements/elements";
+@import "../../bower_components/fontawesome/less/font-awesome.less";
 
 @import "variables";
 
+.mybox 
+{
+
+  height: @box-height;
+  border: @box-border-size solid @box-border-color; 
+    
+}
 div.box1 {
- 
-  width: 50px;
-  height: 50px;
-  border: 1px solid #333;
+  
+  .mybox;
+  background-color: @corporate-color;
+  
+  &:hover {
+    
+    background-color: lighten(@corporate-color, 60%);
+    
+  }
 
  }
 
 div.box2 {
+  .mybox;
  
-  width: 50px;
-  height: 50px;
-  border: 1px solid #333;
+  background-color: lighten(@corporate-color, 60%); 
+  .border-radius(@box-border-radius, @box-border-radius, @box-border-overdose, @box-border-radius);
+  .gradient(#FFF, @mycolor, lighten(@mycolor, 45%))
  }
 
 div.box3 {
+  .mybox;
+  background-color: @corporate-color;
+ }
  
-  width: 50px;
-  height: 50px;
-  border: 1px solid #333;
+ .fa-border-red
+ {
+   border-color:#fc0707;
  }
